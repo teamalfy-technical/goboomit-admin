@@ -102,8 +102,8 @@ export default function Authenticated({
                                 </NavLink>
 
                                 <NavLink
-                                    href={route("profile.edit")}
-                                    active={route().current("profile.edit")}
+                                    href={route("payout")}
+                                    active={route().current("payout")}
                                     className="w-full py-2 flex items-center"
                                 >
                                     <span className="mr-5">
