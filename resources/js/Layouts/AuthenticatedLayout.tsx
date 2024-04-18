@@ -15,7 +15,7 @@ export default function Authenticated({
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-white">
             <div className="flex flex-row w-full justify-between">
                 <aside
                     className={
@@ -188,14 +188,15 @@ export default function Authenticated({
                             <div className="flex justify-between h-16">
                                 <div className="flex">
                                     <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                        <NavLink
+                                        {/* <NavLink
                                             href={route("dashboard")}
                                             active={route().current(
                                                 "dashboard"
                                             )}
                                         >
                                             Dashboard
-                                        </NavLink>
+                                        </NavLink> */}
+                                        <div></div>
                                     </div>
                                 </div>
 
