@@ -144,7 +144,7 @@ export default function Authenticated({
 
                             <div className="mb-16 w-full">
                                 <ResponsiveNavLink
-                                    className="bg-[#7E6868] rounded-md text-white flex justify-center items-center
+                                    className="bg-primary rounded-md text-white flex justify-center items-center
                                     text-sm"
                                     method="post"
                                     href={route("logout")}
