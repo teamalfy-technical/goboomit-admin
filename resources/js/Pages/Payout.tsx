@@ -4,10 +4,10 @@ import { PageProps } from "@/types";
 import AmountCard from "@/Components/Cards/AmountCard";
 import Pagination from "@/Components/Pagination/Pagination";
 
-export default function Dashboard({ auth }: PageProps) {
+export default function Payout({ auth }: PageProps) {
     return (
         <AuthenticatedLayout user={auth.user}>
-            <Head title="Dashboard" />
+            <Head title="Payouts" />
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -55,7 +55,7 @@ export default function Dashboard({ auth }: PageProps) {
                                                     scope="col"
                                                     className="text-left py-3 px-3 text-sm uppercase"
                                                 >
-                                                    User
+                                                    Influncer
                                                 </th>
                                                 <th
                                                     scope="col"

@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/payouts', function () {
+    return Inertia::render('Payout');
+})->middleware(['auth', 'verified'])->name('payout');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
