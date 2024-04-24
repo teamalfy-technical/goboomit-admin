@@ -31,4 +31,61 @@ return [
         ],
     ],
 
+
+    'stripe' => [
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+        'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
+        'subscription_key' => 'paid',
+        'default_currency' => 'DKK',
+        'plans' => [
+            'regular' => [
+                'name' => 'Regular',
+                'slug' => env('STRIPE_REGULAR_PLAN_SLUG', 'regular'),
+            ],
+            'influencer' => [
+                'name' => 'Influencer',
+                'slug' => env('STRIPE_INFLUENCER_PLAN_SLUG', 'influencer'),
+            ],
+            'vendor' => [
+                'grow_boomit' => [
+                    'name' => 'Grow Boomit',
+                    'slug' => env('STRIPE_GROW_BOOMIT_PLAN_SLUG', 'grow_boomit'),
+                    'features' => [
+                        'campaigns_per_month' => 999999999,
+                        'influencers_per_campaign' => 0,
+                    ],
+                    'basket_value_percentage' => 5,
+                    'influencer_commission_percentage' => 0,
+                ],
+                'grow_boomit_influencer' => [
+                    'name' => 'Grow Boomit Influencer',
+                    'slug' => env('STRIPE_GROW_BOOMIT_INFLUENCER_PLAN_SLUG', 'grow_boomit_influencer'),
+                    'product' => env('STRIPE_GROW_BOOMIT_INFLUENCER_PRODUCT_ID'),
+                    'monthly_plan_id' => env('STRIPE_GROW_BOOMIT_INFLUENCER_MONTHLY_PRICE_ID'),
+                    'yearly_plan_id' => env('STRIPE_GROW_BOOMIT_INFLUENCER_YEARLY_PRICE_ID'),
+                    'features' => [
+                        'campaigns_per_month' => 999999999,
+                        'influencers_per_campaign' => 2,
+                    ],
+                    'basket_value_percentage' => 15,
+                    'influencer_commission_percentage' => 5,
+                ],
+                'grow_boomit_pro_influencer' => [
+                    'name' => 'Grow Boomit Pro Influencer',
+                    'slug' => env('STRIPE_GROW_BOOMIT_PRO_INFLUENCER_PLAN_SLUG', 'grow_boomit_pro_influencer'),
+                    'product' => env('STRIPE_GROW_BOOMIT_PRO_INFLUENCER_PRODUCT_ID'),
+                    'monthly_plan_id' => env('STRIPE_GROW_BOOMIT_PRO_INFLUENCER_MONTHLY_PRICE_ID'),
+                    'yearly_plan_id' => env('STRIPE_GROW_BOOMIT_PRO_INFLUENCER_YEARLY_PRICE_ID'),
+                    'features' => [
+                        'campaigns_per_month' => 999999999,
+                        'influencers_per_campaign' => 5,
+                    ],
+                    'basket_value_percentage' => 10,
+                    'influencer_commission_percentage' => 5,
+                ]
+            ],
+        ]
+    ],
+
 ];
